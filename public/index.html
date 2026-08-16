@@ -4,6 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="The Road - discover Armenia through guided tours of Mount Ararat, Lake Sevan and Tatev Monastery. Book your Armenian adventure today."
+    />
+    <meta property="og:title" content="The Road - Explore Armenia" />
+    <meta
+      property="og:description"
+      content="Discover Armenia's ancient culture, breathtaking landscapes and warm hospitality with guided tours to Mount Ararat, Lake Sevan and Tatev Monastery."
+    />
+    <meta property="og:image" content="images/header-bg.jpg" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="images/air-balloon.png" type="image/png" />
     <link
       href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,600,700,900&display=swap"
       rel="stylesheet"
@@ -12,7 +24,43 @@
     <title>The Road - Explore Armenia</title>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <div class="container">
+      <!-- Theme toggle -->
+      <button
+        id="theme-toggle"
+        class="theme-toggle center"
+        aria-label="Toggle dark mode"
+        aria-pressed="false"
+      >
+        <svg
+          class="icon-moon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+        <svg
+          class="icon-sun"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="4" />
+          <path
+            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+          />
+        </svg>
+      </button>
+
       <!-- Navbar -->
       <div class="open-navbar-icon navbar-icon center">
         <div class="line"></div>
@@ -20,24 +68,24 @@
         <div class="line"></div>
       </div>
       <div class="navbar-wrapper">
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Primary">
           <div class="close-navbar-icon navbar-icon center">
             <div class="line line-1"></div>
             <div class="line line-2"></div>
           </div>
           <div class="nav-list">
-            <a href="#" class="nav-link center">Home</a>
-            <a href="#" class="nav-link center">Tours</a>
-            <a href="#" class="nav-link center">About</a>
-            <a href="#" class="nav-link center">Offer</a>
-            <a href="#" class="nav-link center">Contact</a>
+            <a href="#home" class="nav-link center">Home</a>
+            <a href="#tours" class="nav-link center">Tours</a>
+            <a href="#about" class="nav-link center">About</a>
+            <a href="#offer" class="nav-link center">Offer</a>
+            <a href="#contact" class="nav-link center">Contact</a>
           </div>
         </nav>
       </div>
       <!-- End of Navbar -->
 
       <!-- Header -->
-      <header class="header center">
+      <header class="header center" id="home">
         <div class="header-text">
           <h1 class="heading">Discover Armenia</h1>
           <p class="header-paragraph">
@@ -51,7 +99,7 @@
           class="header-image"
         />
         <div class="logo">
-          <h1>
+          <h2>
             <span class="center">A</span>
             <span class="center">r</span>
             <span class="center">m</span>
@@ -59,203 +107,464 @@
             <span class="center">n</span>
             <span class="center">i</span>
             <span class="center">a</span>
-          </h1>
+          </h2>
         </div>
       </header>
       <!-- End of Header -->
 
-      <!-- Popular tours -->
-      <section class="popular-tours">
-        <h1 class="popular-tours-heading">Popular Tours in Armenia</h1>
-        <div class="cards-wrapper">
-          <div class="card">
-            <div class="front-side">
-              <img
-                src="images/Ararat-3.jpeg"
-                alt="Mountains"
-                class="card-image"
-              />
-              <h1 class="tour-name">Explore Mount Ararat</h1>
-              <ul class="card-list">
-                <li class="card-list-item">5 days tour</li>
-                <li class="card-list-item">Up to 15 people</li>
-                <li class="card-list-item">2 local guides</li>
-                <li class="card-list-item">Stay in local guesthouses</li>
-                <li class="card-list-item">Difficulty: medium</li>
-              </ul>
-              <button class="navigation-button">price &gt;&gt;</button>
+      <main id="main-content">
+        <!-- Popular tours -->
+        <section class="popular-tours" id="tours">
+          <h2 class="popular-tours-heading reveal">Popular Tours in Armenia</h2>
+          <div class="cards-wrapper">
+            <div class="card reveal">
+              <div class="front-side">
+                <img
+                  src="images/Ararat-3.jpeg"
+                  alt="Mount Ararat"
+                  class="card-image"
+                  loading="lazy"
+                />
+                <h3 class="tour-name">Explore Mount Ararat</h3>
+                <ul class="card-list">
+                  <li class="card-list-item">5 days tour</li>
+                  <li class="card-list-item">Up to 15 people</li>
+                  <li class="card-list-item">2 local guides</li>
+                  <li class="card-list-item">Stay in local guesthouses</li>
+                  <li class="card-list-item">Difficulty: medium</li>
+                </ul>
+                <button class="navigation-button">price &gt;&gt;</button>
+              </div>
+              <div class="back-side center">
+                <button class="navigation-button">&lt;&lt; back</button>
+                <h3 class="tour-price">$350</h3>
+                <button class="card-button">Book Now</button>
+              </div>
             </div>
-            <div class="back-side center">
-              <button class="navigation-button">&lt;&lt; back</button>
-              <h3 class="tour-price">$350</h3>
-              <button class="card-button">Book Now</button>
+            <div class="card reveal">
+              <div class="front-side">
+                <img
+                  src="images/Lake-Sevan-2.jpeg"
+                  alt="Lake Sevan"
+                  class="card-image"
+                  loading="lazy"
+                />
+                <h3 class="tour-name">Lake Sevan Adventure</h3>
+                <ul class="card-list">
+                  <li class="card-list-item">3 days tour</li>
+                  <li class="card-list-item">Up to 25 people</li>
+                  <li class="card-list-item">3 local guides</li>
+                  <li class="card-list-item">Stay in lakeside cabins</li>
+                  <li class="card-list-item">Difficulty: easy</li>
+                </ul>
+                <button class="navigation-button">price &gt;&gt;</button>
+              </div>
+              <div class="back-side center">
+                <button class="navigation-button">&lt;&lt; back</button>
+                <h3 class="tour-price">$275</h3>
+                <button class="card-button">Book Now</button>
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="front-side">
-              <img
-                src="images/Lake-Sevan-2.jpeg"
-                alt="Lake Sevan"
-                class="card-image"
-              />
-              <h1 class="tour-name">Lake Sevan Adventure</h1>
-              <ul class="card-list">
-                <li class="card-list-item">3 days tour</li>
-                <li class="card-list-item">Up to 25 people</li>
-                <li class="card-list-item">3 local guides</li>
-                <li class="card-list-item">Stay in lakeside cabins</li>
-                <li class="card-list-item">Difficulty: easy</li>
-              </ul>
-              <button class="navigation-button">price &gt;&gt;</button>
+            <div class="card reveal">
+              <div class="front-side">
+                <img
+                  src="images/tatever-2.png"
+                  alt="Tatev Monastery"
+                  class="card-image"
+                  loading="lazy"
+                />
+                <h3 class="tour-name">Tatev Monastery</h3>
+                <ul class="card-list">
+                  <li class="card-list-item">1 day tour</li>
+                  <li class="card-list-item">Up to 40 people</li>
+                  <li class="card-list-item">1 expert guide</li>
+                  <li class="card-list-item">Visit iconic landmarks</li>
+                  <li class="card-list-item">Difficulty: easy</li>
+                </ul>
+                <button class="navigation-button">price &gt;&gt;</button>
+              </div>
+              <div class="back-side center">
+                <button class="navigation-button">&lt;&lt; back</button>
+                <h3 class="tour-price">$99</h3>
+                <button class="card-button">Book Now</button>
+              </div>
             </div>
-            <div class="back-side center">
-              <button class="navigation-button">&lt;&lt; back</button>
-              <h3 class="tour-price">$275</h3>
-              <button class="card-button">Book Now</button>
+            <div class="card reveal">
+              <div class="front-side">
+                <img
+                  src="images/armenia-garni.webp"
+                  alt="Garni Temple and Geghard Monastery"
+                  class="card-image"
+                  loading="lazy"
+                />
+                <h3 class="tour-name">Garni &amp; Geghard</h3>
+                <ul class="card-list">
+                  <li class="card-list-item">1 day tour</li>
+                  <li class="card-list-item">Up to 20 people</li>
+                  <li class="card-list-item">1 expert guide</li>
+                  <li class="card-list-item">Pagan temple &amp; cave monastery</li>
+                  <li class="card-list-item">Difficulty: easy</li>
+                </ul>
+                <button class="navigation-button">price &gt;&gt;</button>
+              </div>
+              <div class="back-side center">
+                <button class="navigation-button">&lt;&lt; back</button>
+                <h3 class="tour-price">$120</h3>
+                <button class="card-button">Book Now</button>
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="front-side">
-              <img
-                src="images/tatever-2.png"
-                alt="Tatev Monastery"
-                class="card-image"
-              />
-              <h1 class="tour-name">Tatev Monastery</h1>
-              <ul class="card-list">
-                <li class="card-list-item">1 day tour</li>
-                <li class="card-list-item">Up to 40 people</li>
-                <li class="card-list-item">1 expert guide</li>
-                <li class="card-list-item">Visit iconic landmarks</li>
-                <li class="card-list-item">Difficulty: easy</li>
-              </ul>
-              <button class="navigation-button">price &gt;&gt;</button>
+            <div class="card reveal">
+              <div class="front-side">
+                <img
+                  src="images/khor-Virap.webp"
+                  alt="Khor Virap Monastery with Mount Ararat in the background"
+                  class="card-image"
+                  loading="lazy"
+                />
+                <h3 class="tour-name">Khor Virap</h3>
+                <ul class="card-list">
+                  <li class="card-list-item">1 day tour</li>
+                  <li class="card-list-item">Up to 30 people</li>
+                  <li class="card-list-item">1 local guide</li>
+                  <li class="card-list-item">Best views of Mount Ararat</li>
+                  <li class="card-list-item">Difficulty: easy</li>
+                </ul>
+                <button class="navigation-button">price &gt;&gt;</button>
+              </div>
+              <div class="back-side center">
+                <button class="navigation-button">&lt;&lt; back</button>
+                <h3 class="tour-price">$85</h3>
+                <button class="card-button">Book Now</button>
+              </div>
             </div>
-            <div class="back-side center">
-              <button class="navigation-button">&lt;&lt; back</button>
-              <h3 class="tour-price">$99</h3>
-              <button class="card-button">Book Now</button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End of Popular tours -->
-
-      <!-- Stories -->
-      <section class="stories">
-        <div class="video-container">
-          <video class="bg-video" autoplay muted loop>
-            <source src="images/video.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div class="stories-wrapper">
-          <div class="story-bg">
-            <div class="story">
-              <img
-                src="images/story-img-1.jpg"
-                alt="Customer image"
-                class="story-image"
-              />
-              <div class="story-text">
-                <h1 class="story-heading">
-                  An unforgettable journey to Armenia's heart
-                </h1>
-                <p class="story-paragraph">
-                  "From the awe-inspiring peaks of Mount Ararat to the
-                  crystal-clear waters of Lake Sevan, Armenia is a land that
-                  captures the soul. Every corner offers a new story, a new
-                  experience."
-                </p>
+            <div class="card reveal">
+              <div class="front-side">
+                <img
+                  src="images/Republic-Square-Yerevan.jpg"
+                  alt="Republic Square in Yerevan with fountains"
+                  class="card-image"
+                  loading="lazy"
+                />
+                <h3 class="tour-name">Yerevan City</h3>
+                <ul class="card-list">
+                  <li class="card-list-item">2 days tour</li>
+                  <li class="card-list-item">Up to 20 people</li>
+                  <li class="card-list-item">2 local guides</li>
+                  <li class="card-list-item">Stay in city hotel</li>
+                  <li class="card-list-item">Difficulty: easy</li>
+                </ul>
+                <button class="navigation-button">price &gt;&gt;</button>
+              </div>
+              <div class="back-side center">
+                <button class="navigation-button">&lt;&lt; back</button>
+                <h3 class="tour-price">$150</h3>
+                <button class="card-button">Book Now</button>
               </div>
             </div>
           </div>
-          <div class="story-bg">
-            <div class="story">
-              <img
-                src="images/story-img-2.jpg"
-                alt="Customer image"
-                class="story-image"
-              />
-              <div class="story-text">
-                <h1 class="story-heading">My amazing cultural adventure</h1>
-                <p class="story-paragraph">
-                  "Exploring Armenia's rich history and vibrant culture was an
-                  adventure I'll never forget. The hospitality of the people and
-                  the stunning landscapes made it truly magical."
-                </p>
+        </section>
+        <!-- End of Popular tours -->
+
+        <!-- About -->
+        <section class="about" id="about">
+          <div class="about-image reveal">
+            <img src="images/bg-1.jpg" alt="Armenian countryside" loading="lazy" />
+          </div>
+          <div class="about-content reveal">
+            <h2 class="about-heading">Why Choose Us</h2>
+            <p class="about-paragraph">
+              We've spent a decade guiding travelers through Armenia's
+              mountains, monasteries and lakeside villages &mdash; small
+              groups, local guides, and routes shaped by people who grew up
+              here.
+            </p>
+            <div class="stats-grid">
+              <div class="stat">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">Years of Experience</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">5,000+</span>
+                <span class="stat-label">Happy Travelers</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">20+</span>
+                <span class="stat-label">Destinations Covered</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">15</span>
+                <span class="stat-label">Expert Local Guides</span>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- End of Stories -->
+        </section>
+        <!-- End of About -->
 
-      <!-- Contact -->
-      <section class="contact">
-        <h1 class="contact-heading">Get in Touch</h1>
-        <form class="contact-form center">
-          <div class="input-group">
-            <label>Full Name *</label>
-            <input
-              type="text"
-              class="contact-input"
-              placeholder="Enter Your Name"
-            />
-          </div>
-          <div class="input-groups">
-            <div class="input-group">
-              <label>Email *</label>
-              <input
-                type="email"
-                class="contact-input"
-                placeholder="Enter Your Email"
+        <!-- Offer -->
+        <section class="offer" id="offer">
+          <h2 class="offer-heading reveal">Special Offers</h2>
+          <div class="offer-wrapper">
+            <div class="offer-card reveal">
+              <img
+                src="images/forest.jpg"
+                alt="Dilijan forest"
+                class="offer-image"
+                loading="lazy"
               />
+              <div class="offer-body">
+                <h3 class="offer-name">Dilijan Forest Retreat</h3>
+                <p class="offer-description">
+                  3 days hiking and relaxing in Armenia's "Little
+                  Switzerland".
+                </p>
+                <div class="offer-price">
+                  <span class="offer-price-old">$220</span>
+                  <span class="offer-price-new">$180</span>
+                </div>
+                <a href="#contact" class="card-button offer-button">Book Now</a>
+              </div>
             </div>
+            <div class="offer-card reveal">
+              <img
+                src="images/river.jpg"
+                alt="Debed river canyon"
+                class="offer-image"
+                loading="lazy"
+              />
+              <div class="offer-body">
+                <h3 class="offer-name">Debed River Adventure</h3>
+                <p class="offer-description">
+                  2 days rafting and canyon hiking along the Debed river.
+                </p>
+                <div class="offer-price">
+                  <span class="offer-price-old">$150</span>
+                  <span class="offer-price-new">$120</span>
+                </div>
+                <a href="#contact" class="card-button offer-button">Book Now</a>
+              </div>
+            </div>
+            <div class="offer-card reveal">
+              <img
+                src="images/Noravank_overview.webp"
+                alt="Noravank Monastery in a red rock canyon"
+                class="offer-image"
+                loading="lazy"
+              />
+              <div class="offer-body">
+                <h3 class="offer-name">Noravank Canyon Escape</h3>
+                <p class="offer-description">
+                  2 days exploring the red cliffs and 13th-century monastery of
+                  Noravank.
+                </p>
+                <div class="offer-price">
+                  <span class="offer-price-old">$180</span>
+                  <span class="offer-price-new">$140</span>
+                </div>
+                <a href="#contact" class="card-button offer-button">Book Now</a>
+              </div>
+            </div>
+            <div class="offer-card reveal">
+              <img
+                src="images/jermuk.png"
+                alt="Jermuk waterfall and spa town"
+                class="offer-image"
+                loading="lazy"
+              />
+              <div class="offer-body">
+                <h3 class="offer-name">Jermuk Wellness Getaway</h3>
+                <p class="offer-description">
+                  3 days of mineral springs, waterfalls and mountain air in
+                  Armenia's spa capital.
+                </p>
+                <div class="offer-price">
+                  <span class="offer-price-old">$260</span>
+                  <span class="offer-price-new">$210</span>
+                </div>
+                <a href="#contact" class="card-button offer-button">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End of Offer -->
+
+        <!-- Stories -->
+        <section class="stories" id="stories">
+          <div class="video-container">
+            <video class="bg-video" autoplay muted loop playsinline>
+              <source src="images/video.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="stories-wrapper">
+            <div class="story-bg reveal">
+              <div class="story">
+                <img
+                  src="images/story-img-1.jpg"
+                  alt="Sarah Whitfield, customer portrait"
+                  class="story-image"
+                  loading="lazy"
+                />
+                <div class="story-text">
+                  <h3 class="story-heading">
+                    An unforgettable journey to Armenia's heart
+                  </h3>
+                  <p class="story-paragraph">
+                    "From the awe-inspiring peaks of Mount Ararat to the
+                    crystal-clear waters of Lake Sevan, Armenia is a land that
+                    captures the soul. Every corner offers a new story, a new
+                    experience."
+                  </p>
+                  <p class="story-author">Sarah Whitfield &mdash; Mount Ararat Tour</p>
+                </div>
+              </div>
+            </div>
+            <div class="story-bg reveal">
+              <div class="story">
+                <img
+                  src="images/story-img-2.jpg"
+                  alt="James Carter, customer portrait"
+                  class="story-image"
+                  loading="lazy"
+                />
+                <div class="story-text">
+                  <h3 class="story-heading">My amazing cultural adventure</h3>
+                  <p class="story-paragraph">
+                    "Exploring Armenia's rich history and vibrant culture was
+                    an adventure I'll never forget. The hospitality of the
+                    people and the stunning landscapes made it truly magical."
+                  </p>
+                  <p class="story-author">James Carter &mdash; Lake Sevan Adventure</p>
+                </div>
+              </div>
+            </div>
+            <div class="story-bg reveal">
+              <div class="story">
+                <div class="story-avatar center" aria-hidden="true">EN</div>
+                <div class="story-text">
+                  <h3 class="story-heading">Soaring above Tatev's canyon</h3>
+                  <p class="story-paragraph">
+                    "Riding the Wings of Tatev cable car above the canyon was
+                    breathtaking, and the monastery itself felt like stepping
+                    back centuries. Our guide made every stop worth it."
+                  </p>
+                  <p class="story-author">Elena Novak &mdash; Tatev Monastery Tour</p>
+                </div>
+              </div>
+            </div>
+            <div class="story-bg reveal">
+              <div class="story">
+                <div class="story-avatar center" aria-hidden="true">DK</div>
+                <div class="story-text">
+                  <h3 class="story-heading">Yerevan surprised me at every turn</h3>
+                  <p class="story-paragraph">
+                    "I expected old churches and mountains, but Yerevan's
+                    cafes, street art and the Cascade complex stole my heart
+                    just as much. A perfect mix of history and modern life."
+                  </p>
+                  <p class="story-author">David Kim &mdash; Yerevan City Tour</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End of Stories -->
+
+        <!-- Contact -->
+        <section class="contact" id="contact">
+          <h2 class="contact-heading">Get in Touch</h2>
+          <form class="contact-form center" novalidate>
             <div class="input-group">
-              <label>Phone</label>
+              <label for="contact-name">Full Name *</label>
               <input
                 type="text"
-                class="contact-input"
-                placeholder="Enter Phone Number"
+                id="contact-name"
+                name="name"
+                placeholder="Enter Your Name"
+                required
+                aria-describedby="contact-name-error"
               />
+              <span
+                class="error-message"
+                id="contact-name-error"
+                aria-live="polite"
+              ></span>
             </div>
-          </div>
-          <div class="input-group">
-            <label>Message</label>
-            <textarea
-              class="form-textarea"
-              placeholder="Your Message Here..."
-            ></textarea>
-          </div>
-          <input type="submit" value="Submit" class="form-btn" />
-        </form>
-      </section>
-      <!-- End of Contact -->
+            <div class="input-groups">
+              <div class="input-group">
+                <label for="contact-email">Email *</label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  placeholder="Enter Your Email"
+                  required
+                  aria-describedby="contact-email-error"
+                />
+                <span
+                  class="error-message"
+                  id="contact-email-error"
+                  aria-live="polite"
+                ></span>
+              </div>
+              <div class="input-group">
+                <label for="contact-phone">Phone</label>
+                <input
+                  type="text"
+                  id="contact-phone"
+                  name="phone"
+                  placeholder="Enter Phone Number"
+                />
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="contact-message">Message</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                placeholder="Your Message Here..."
+                required
+                aria-describedby="contact-message-error"
+              ></textarea>
+              <span
+                class="error-message"
+                id="contact-message-error"
+                aria-live="polite"
+              ></span>
+            </div>
+            <p class="form-status" id="form-status" aria-live="polite"></p>
+            <input type="submit" value="Submit" class="form-btn" />
+          </form>
+        </section>
+        <!-- End of Contact -->
+      </main>
 
       <!-- Footer -->
       <footer class="footer">
         <div class="footer-list">
-          <a href="#" class="footer-link">Home</a>
-          <a href="#" class="footer-link">Tours</a>
-          <a href="#" class="footer-link">About</a>
-          <a href="#" class="footer-link">Offer</a>
-          <a href="#" class="footer-link">Contact</a>
+          <a href="#home" class="footer-link">Home</a>
+          <a href="#tours" class="footer-link">Tours</a>
+          <a href="#about" class="footer-link">About</a>
+          <a href="#offer" class="footer-link">Offer</a>
+          <a href="#contact" class="footer-link">Contact</a>
         </div>
         <p class="footer-paragraph">
           Copyright &copy; ExploreArmenia All Rights Reserved
         </p>
       </footer>
       <!-- End of Footer -->
+
+      <button
+        id="back-to-top"
+        class="back-to-top center"
+        aria-label="Back to top"
+      >
+        &uarr;
+      </button>
     </div>
     <script src="script.js"></script>
 
     <script type="module">
-      // Import the functions you need from the SDKs you need
       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
 
-      // Your web app's Firebase configuration
       const firebaseConfig = {
         apiKey: "AIzaSyB9hnCbf5ZHXsqJ1WAl5B1D9P6qQWm7Rrk",
         authDomain: "theroad-9bc32.firebaseapp.com",
@@ -265,8 +574,7 @@
         appId: "1:249449166198:web:9b44c3f9824ab711ccf657",
       };
 
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
+      initializeApp(firebaseConfig);
     </script>
   </body>
 </html>
